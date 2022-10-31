@@ -1,0 +1,8 @@
+{% load static %}
+<!-- CSS CUSTOM -->
+<link rel="stylesheet" href="{% static "css/base.css" %}">
+{% block title %}<h2>My Todo's</h2>{% endblock %}
+{% block content %}
+ <p>Sign-up successful click here to login</p>
+ <a href="{% url "login" %}"><h3><input type="submit" value="Sign_in"></h3></a>
+ {% endblock %}
