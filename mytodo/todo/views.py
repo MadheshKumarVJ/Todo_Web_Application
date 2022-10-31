@@ -3,6 +3,7 @@ from .forms import LoginForm, UserRegistrationForm
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from .models import Profile
 
 # Create your views here.
 
@@ -47,7 +48,7 @@ def register(request):
             # Save the User object
             new_user.save()
             # Create the user profile
-            # Profile.objects.create(user=new_user)
+            Profile.objects.create(user=new_user)
             return render(
                 request, "todo/register_done.html", {"new_user": new_user}
             )
