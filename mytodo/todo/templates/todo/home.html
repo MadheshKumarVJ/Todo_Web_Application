@@ -1,7 +1,12 @@
-{% load static %}
-<!-- CSS CUSTOM -->
-<link rel="stylesheet" href="{% static "css/base.css" %}">
-{% block title %}<h2>MyTodo's</h2>{% endblock %}
+{% extends 'base.html' %}
+{% block title %} <h1>Home</h1> {% endblock %}
 {% block content %}
-<p>Add Todo</p>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p><a href="{% url 'password_change' %}">Change password</a></p>
+{% else %}
+  <p>You are now logged out </p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
 {% endblock %}
