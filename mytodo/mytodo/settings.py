@@ -103,6 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "neomaddy104@gmail.com"
+EMAIL_HOST_PASSWORD = "gkiizqlykfgoowqx"
+
 LOGIN_REDIRECT_URL = "home"
 
 # Internationalization

@@ -11,4 +11,6 @@
     {{ form.as_p }}
     <button type="submit">Login</button>
   </form>
+    <h3>Forget password click below to reset your password</h3>
+    <a href="{% url "password_reset" %}"><p><input type="button" value="Reset password"></p></a>
 {% endblock %}

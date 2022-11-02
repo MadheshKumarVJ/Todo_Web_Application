@@ -37,6 +37,10 @@ def Home_Page(request):
     return render(request, "todo/home.html")
 
 
+def Welcome_Page(request):
+    return render(request, "base.html")
+
+
 def register(request):
     if request.method == "POST":
         user_form = UserRegistrationForm(request.POST)
